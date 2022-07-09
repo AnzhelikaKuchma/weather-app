@@ -75,3 +75,10 @@ li {
 .units {
   color: #878787;
 }
+
+.github-link {
+  color: #878787;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 12px;
+}
