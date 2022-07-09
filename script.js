@@ -61,7 +61,7 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#searching-form");
 form.addEventListener("submit", handleSubmit);
-search("London");
+search("Kyiv");
 
 //Add a Current Location button. When clicking on it, it uses the Geolocation API to get your GPS coordinates and display and the city and current temperature using the OpenWeather API.
 
