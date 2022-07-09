@@ -29,7 +29,7 @@ li {
     rgb(254, 254, 254) 86.8%
   );
   margin: 100px auto;
-  max-width: 600px;
+  max-width: 700px;
   padding: 15px;
 }
 .temperature {
@@ -77,8 +77,11 @@ li {
 }
 
 .github-link {
-  color: #878787;
+  display: block;
+  margin: 0 auto;
+  color: #464545;
   text-align: center;
-  margin-top: 25px;
-  font-size: 12px;
+  font-size: 13px;
+  text-align: center;
+  padding-top: 40px;
 }
