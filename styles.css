@@ -4,10 +4,10 @@ body {
 
 h1 {
   color: #e8630a;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 800px;
-  margin-bottom: 5px;
-  line-height: 28px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 ul {
   margin: 0 0 10px;
@@ -17,8 +17,15 @@ li {
   color: #878787;
   font-size: 16px;
   font-weight: 100;
-  line-height: 20px;
+  line-height: 24px;
   list-style: none;
+}
+li:first-letter {
+  text-transform: capitalize;
+}
+.weather-app-wrapper {
+  margin: 100px auto;
+  max-width: 660px;
 }
 .weather-app {
   border: 1px solid #dadde1;
@@ -28,9 +35,7 @@ li {
     rgb(181, 239, 249) 10.5%,
     rgb(254, 254, 254) 86.8%
   );
-  margin: 100px auto;
-  max-width: 700px;
-  padding: 15px;
+  padding: 25px;
 }
 .temperature {
   font-size: 55px;
@@ -43,9 +48,7 @@ li {
   padding: 0;
   float: left;
 }
-.cel {
-  color: #e8630a;
-}
+
 .search-form {
   margin-bottom: 20px;
   color: #878787;
@@ -59,7 +62,6 @@ li {
   border: none;
   background: transparent;
   margin-top: 35px;
-  margin-bottom: 10px;
 }
 .day {
   color: #e8630a;
@@ -70,18 +72,14 @@ li {
 }
 .high-low {
   color: #878787;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 .units {
+  margin-left: 10px;
   color: #878787;
 }
 
 .github-link {
-  display: block;
-  margin: 0 auto;
   color: #464545;
-  text-align: center;
-  font-size: 13px;
-  text-align: center;
-  padding-top: 40px;
+  font-size: 14px;
 }

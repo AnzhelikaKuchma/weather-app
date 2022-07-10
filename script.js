@@ -1,5 +1,5 @@
-// Feature # Get a Date
-function formateDate(date) {
+function formateDate(timestamp) {
+  let date = new Date(timestamp);
   let days = [
     "Sunday",
     "Monday",
@@ -9,25 +9,19 @@ function formateDate(date) {
     "Friday",
     "Saturday",
   ];
-  let currentDay = days[currentTime.getDay()];
+  let day = days[date.getDay()];
 
-  let currentHour = currentTime.getHours();
-  if (currentHour < 10) {
-    currentHour = `0${currentHour}`;
+  let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
   }
-  let currentMinutes = currentTime.getMinutes();
-  if (currentMinutes < 10) {
-    currentMinutes = `0${currentMinutes}`;
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
   }
 
-  return `${currentDay}, ${currentHour}:${currentMinutes}`;
+  return `${day}, ${hour}:${minutes}`;
 }
-
-let dateElement = document.querySelector("#date");
-let currentTime = new Date();
-dateElement.innerHTML = formateDate(currentTime);
-
-// In your project, when a user searches for a city (example: New York), it should display the name of the city on the result page and the current temperature of the city.There's no need to include a temperature conversion at the moment. This will be taught later on in the course.
 
 function showTemperature(responce) {
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -41,7 +35,9 @@ function showTemperature(responce) {
   );
   document.querySelector("#description").innerHTML =
     responce.data.weather[0].main;
-  console.log(responce);
+  document.querySelector("#date").innerHTML = formateDate(
+    responce.data.dt * 1000
+  );
 }
 
 function search(city) {
@@ -61,9 +57,7 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#searching-form");
 form.addEventListener("submit", handleSubmit);
-search("Kyiv");
-
-//Add a Current Location button. When clicking on it, it uses the Geolocation API to get your GPS coordinates and display and the city and current temperature using the OpenWeather API.
+search("London");
 
 function handlePosition(position) {
   let lat = position.coords.latitude;
