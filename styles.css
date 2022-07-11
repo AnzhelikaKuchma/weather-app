@@ -73,8 +73,18 @@ li:first-letter {
 .units {
   margin-left: 10px;
 }
+.units a {
+  text-decoration: none;
+}
 
 .github-link {
   color: #464545;
   font-size: 14px;
+}
+.active {
+  color: black;
+  cursor: default;
+}
+.active:hover {
+  color: black;
 }
