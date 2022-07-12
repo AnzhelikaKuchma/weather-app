@@ -35,6 +35,7 @@ li:first-letter {
 }
 .temperature {
   font-size: 55px;
+  margin-top: 15px;
 
   color: #272142;
   line-height: 70px;
